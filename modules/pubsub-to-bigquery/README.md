@@ -93,8 +93,8 @@ module "pubsub-to-bigquery" {
 | errors\_dataset\_description | BigQuery dataset description for Dataflow errors. | `string` | `""` | no |
 | errors\_dataset\_name | BigQuery dataset name for Dataflow errors. | `string` | n/a | yes |
 | errors\_table\_name | BigQuery table name for Dataflow errors. | `string` | n/a | yes |
-| job\_name | Dataflow job name. | `string` | `"job"` | no |
-| jobs | Dataflow job(s). | <pre>set(object({<br>    version    = string<br>    path       = string<br>    parameters = map(string)<br>  }))</pre> | `[]` | no |
+| job\_name | Dataflow job name. | `string` | n/a | yes |
+| jobs | Dataflow job(s). | <pre>set(object({<br>    version    = string<br>    path       = string<br>    parameters = map(string)<br>  }))</pre> | n/a | yes |
 | labels | Labels for all resources. | `map(any)` | `{}` | no |
 | location | Location for Storage bucket, and BigQuery dataset. | `string` | n/a | yes |
 | machine\_type | Dataflow worker machine type for the job. | `string` | `null` | no |

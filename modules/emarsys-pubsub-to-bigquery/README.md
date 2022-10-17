@@ -108,8 +108,8 @@ module "emarsys-pubsub-to-bigquery" {
 | dataset\_description | BigQuery dataset description for Dataflow output. | `string` | `""` | no |
 | dataset\_name | BigQuery dataset name for Dataflow output. | `string` | n/a | yes |
 | errors\_dataset\_description | BigQuery dataset description for Dataflow errors. | `string` | `""` | no |
-| job\_name | Dataflow job name. | `string` | `"job"` | no |
-| jobs | Dataflow job(s). | <pre>set(object({<br>    version    = string<br>    path       = string<br>    parameters = map(string)<br>  }))</pre> | `[]` | no |
+| job\_name | Dataflow job name. | `string` | n/a | yes |
+| jobs | Dataflow job(s). | <pre>set(object({<br>    version    = string<br>    path       = string<br>    parameters = map(string)<br>  }))</pre> | n/a | yes |
 | labels | Labels for all resources. | `map(any)` | `{}` | no |
 | location | Location for Storage bucket, and BigQuery dataset. | `string` | `"EU"` | no |
 | machine\_type | Dataflow worker machine type for the job. | `string` | `null` | no |

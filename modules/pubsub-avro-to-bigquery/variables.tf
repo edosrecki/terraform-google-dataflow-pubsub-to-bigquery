@@ -136,7 +136,6 @@ variable "create_errors_topic" {
 variable "errors_topic_name" {
   type        = string
   description = "Pub/Sub topic name for Dataflow errors."
-  default     = "errors-topic"
 }
 
 variable "create_errors_subscription" {
@@ -148,7 +147,6 @@ variable "create_errors_subscription" {
 variable "errors_subscription_name" {
   type        = string
   description = "Pub/Sub subscription name for Dataflow errors."
-  default     = "errors-subscription"
 }
 
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -169,7 +167,6 @@ variable "max_workers" {
 variable "job_name" {
   type        = string
   description = "Dataflow job name."
-  default     = "job"
 }
 
 variable "jobs" {
@@ -180,5 +177,4 @@ variable "jobs" {
   }))
 
   description = "Dataflow job(s)."
-  default     = []
 }

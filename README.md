@@ -127,13 +127,13 @@ module "dataflow-pubsub-to-bigquery" {
 | dataset\_name | BigQuery dataset name for Dataflow output. | `string` | `"dataset"` | no |
 | errors\_bucket\_name | Storage bucket name for Dataflow errors. | `string` | `"errors-bucket"` | no |
 | errors\_dataset\_description | BigQuery dataset description for Dataflow errors. | `string` | `""` | no |
-| errors\_dataset\_name | BigQuery dataset name for Dataflow errors. | `string` | `"errors-dataset"` | no |
+| errors\_dataset\_name | BigQuery dataset name for Dataflow errors. | `string` | `"errors_dataset"` | no |
 | errors\_subscription\_name | Pub/Sub subscription name for Dataflow errors. | `string` | `"errors-subscription"` | no |
 | errors\_table\_description | BigQuery table description for Dataflow errors. | `string` | `""` | no |
 | errors\_table\_name | BigQuery table name for Dataflow errors. | `string` | `"table"` | no |
 | errors\_topic\_name | Pub/Sub topic name for Dataflow errors. | `string` | `"errors-topic"` | no |
 | job\_name | Dataflow job name. | `string` | `"job"` | no |
-| jobs | Dataflow job(s). | <pre>set(object({<br>    version    = string<br>    path       = string<br>    flex       = bool<br>    parameters = map(string)<br>  }))</pre> | `[]` | no |
+| jobs | Dataflow job(s). | <pre>set(object({<br>    version    = string<br>    path       = string<br>    flex       = bool<br>    parameters = map(string)<br>  }))</pre> | n/a | yes |
 | labels | Labels for all resources. | `map(any)` | `{}` | no |
 | location | Location for Storage bucket, and BigQuery dataset. | `string` | `"EU"` | no |
 | machine\_type | Dataflow worker machine type for the job. | `string` | `null` | no |

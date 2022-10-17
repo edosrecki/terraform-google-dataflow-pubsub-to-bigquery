@@ -186,7 +186,6 @@ variable "max_workers" {
 variable "job_name" {
   type        = string
   description = "Dataflow job name."
-  default     = "job"
 }
 
 variable "jobs" {
@@ -197,5 +196,4 @@ variable "jobs" {
   }))
 
   description = "Dataflow job(s)."
-  default     = []
 }

@@ -80,10 +80,10 @@ module "pubsub-avro-to-bigquery" {
 | create\_topic | Create Pub/Sub topic for Dataflow input? | `bool` | `true` | no |
 | dataset\_description | BigQuery dataset description for Dataflow output. | `string` | `""` | no |
 | dataset\_name | BigQuery dataset name for Dataflow output. | `string` | n/a | yes |
-| errors\_subscription\_name | Pub/Sub subscription name for Dataflow errors. | `string` | `"errors-subscription"` | no |
-| errors\_topic\_name | Pub/Sub topic name for Dataflow errors. | `string` | `"errors-topic"` | no |
-| job\_name | Dataflow job name. | `string` | `"job"` | no |
-| jobs | Dataflow job(s). | <pre>set(object({<br>    version    = string<br>    path       = string<br>    parameters = map(string)<br>  }))</pre> | `[]` | no |
+| errors\_subscription\_name | Pub/Sub subscription name for Dataflow errors. | `string` | n/a | yes |
+| errors\_topic\_name | Pub/Sub topic name for Dataflow errors. | `string` | n/a | yes |
+| job\_name | Dataflow job name. | `string` | n/a | yes |
+| jobs | Dataflow job(s). | <pre>set(object({<br>    version    = string<br>    path       = string<br>    parameters = map(string)<br>  }))</pre> | n/a | yes |
 | labels | Labels for all resources. | `map(any)` | `{}` | no |
 | location | Location for Storage bucket, and BigQuery dataset. | `string` | n/a | yes |
 | machine\_type | Dataflow worker machine type for the job. | `string` | `null` | no |

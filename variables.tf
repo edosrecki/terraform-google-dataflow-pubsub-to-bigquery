@@ -197,7 +197,7 @@ variable "create_errors_dataset" {
 variable "errors_dataset_name" {
   type        = string
   description = "BigQuery dataset name for Dataflow errors."
-  default     = "errors-dataset"
+  default     = "errors_dataset"
 }
 
 variable "errors_dataset_description" {
@@ -287,5 +287,4 @@ variable "jobs" {
   }))
 
   description = "Dataflow job(s)."
-  default     = []
 }
