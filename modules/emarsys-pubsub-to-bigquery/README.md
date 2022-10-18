@@ -17,7 +17,8 @@
 
 ## Usage
 
-Check `examples/emarsys-pubsub-to-bigquery` for runnable code.
+Check [`examples/emarsys-pubsub-to-bigquery`](../../examples/emarsys-pubsub-to-bigquery/)
+for runnable code example.
 
 ```hcl
 module "emarsys-pubsub-to-bigquery" {

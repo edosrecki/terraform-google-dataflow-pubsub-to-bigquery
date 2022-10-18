@@ -1,26 +1,27 @@
 # Terraform Dataflow Pub/Sub to BigQuery Module
 
-Deploy various types of Pub/Sub to BigQuery Dataflow pipeline templates, either ones
+Deploy various types of **Pub/Sub to BigQuery Dataflow** pipeline templates, either ones
 [provided by Google](https://cloud.google.com/dataflow/docs/guides/templates/provided-streaming),
-or custom ones.
+or custom ones, together with the other required Google Cloud resources needed for the
+pipeline execution.
 
-It supports both classic and flex Dataflow templates, and it can deploy multiple jobs in
-parallel, so that you can first migrate to a new job version before draining the old
-pipeline. For each job you can specify additional parameters which you can use in your pipeline
+It supports both **classic and flex Dataflow templates**, and it can deploy multiple jobs in
+parallel, so that you can migrate to a new job version before draining the old pipeline.
+For each job you can specify additional parameters which you can use in your pipeline
 code.
 
-This module can deploy additional resources needed for the pipeline, e.g. service account
+This module can **deploy additional resources** needed for the pipeline run, e.g. service account
 and necessary roles, Pub/Sub topic, topic schema, and subscription, Storage bucket for Dataflow
-job temporary files, BigQuery dataset and table for output records, Storage bucekt for failed
+job temporary files, BigQuery dataset and table for output records, Storage bucket for failed
 reords, BigQuery dataset and table for failed records, and Pub/Sub topic and subscription for
 failed records.
 
 Based on the implementation of the pipeline that you want to deploy, you can opt in to deployment
-of different resources by using `use_*` inputs. For example, if your pipeline is writing failed
+of different resources by using **`use_*`** inputs. For example, if your pipeline is writing failed
 records to a Pub/Sub topic, you can set `use_errors_topic = true`.
 
 Additional resources needed for the pipeline execution are created by default, but you can opt
-out of their deployment with `create_*` inputs. For example, if you already manage the service
+out of their deployment with **`create_*`** inputs. For example, if you already manage the service
 account for the job outside of this module, you can set `create_service_account = false`.
 
 ## Usage
@@ -32,7 +33,7 @@ different BigQuery dataset. It uses a classic Dataflow pipeline made available b
 In this example all the necessary resources are managed by the module, so it can be used to
 quickly provision the whole environment.
 
-For simpler usage check available submodules in `module/`, and example use cases in `examples/`.
+For simpler usage check available submodules in [`modules/`](modules/), and example use cases in [`examples/`](examples/).
 
 ```hcl
 module "dataflow-pubsub-to-bigquery" {
