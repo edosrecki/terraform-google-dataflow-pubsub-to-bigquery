@@ -16,6 +16,7 @@ module "emarsys-pubsub-to-bigquery" {
 
   service_account_name = var.service_account_name
   bucket_name          = "${local.prefix}bucket${local.suffix}"
+  temp_folder_name     = "${local.prefix}temp${local.suffix}"
   topic_name           = "${local.prefix}topic${local.suffix}"
   subscription_name    = "${local.prefix}subscription${local.suffix}"
   dataset_name         = replace("${local.prefix}dataset${local.suffix}", "-", "_")

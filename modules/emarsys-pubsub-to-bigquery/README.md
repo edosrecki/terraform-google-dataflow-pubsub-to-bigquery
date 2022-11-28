@@ -34,6 +34,7 @@ module "emarsys-pubsub-to-bigquery" {
 
   service_account_name = "example-service-account"
   bucket_name          = "example-bucket"
+  temp_folder_name     = "example-temp-folder"
   topic_name           = "example-input-topic"
   subscription_name    = "example-input-subscription"
   dataset_name         = "example_dataset"
@@ -121,6 +122,7 @@ module "emarsys-pubsub-to-bigquery" {
 | subscription\_name | Pub/Sub subscription name for Dataflow input. | `string` | n/a | yes |
 | table\_name | BigQuery table name for Dataflow output. | `string` | n/a | yes |
 | table\_schema | BigQuery table JSON schema for Dataflow output. | `string` | n/a | yes |
+| temp\_folder\_name | Storage bucket folder name for Dataflow temporary files. | `string` | n/a | yes |
 | topic\_name | Pub/Sub topic name for Dataflow input. | `string` | n/a | yes |
 | topic\_schema | Pub/Sub topic message schema definition in AVRO format. | `string` | `null` | no |
 

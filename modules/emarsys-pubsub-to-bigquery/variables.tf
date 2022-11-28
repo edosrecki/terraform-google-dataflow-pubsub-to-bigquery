@@ -54,6 +54,11 @@ variable "bucket_name" {
   description = "Storage bucket name for Dataflow files."
 }
 
+variable "temp_folder_name" {
+  type        = string
+  description = "Storage bucket folder name for Dataflow temporary files."
+}
+
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // Pub/Sub input
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

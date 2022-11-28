@@ -23,8 +23,9 @@ module "emarsys-pubsub-to-bigquery" {
   service_account_name   = var.service_account_name
   create_roles           = var.create_roles
 
-  create_bucket = var.create_bucket
-  bucket_name   = var.bucket_name
+  create_bucket    = var.create_bucket
+  bucket_name      = var.bucket_name
+  temp_folder_name = var.temp_folder_name
 
   create_topic = var.create_topic
   topic_name   = var.topic_name
