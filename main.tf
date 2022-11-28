@@ -11,7 +11,7 @@ locals {
 
   // Pub/Sub input
   topic_name            = lower(var.topic_name)
-  topic_schema_gcs_path = lookup(var.topic_schema, "gcs_path", null)
+  topic_schema_gcs_path = try(var.topic_schema.gcs_path, null)
   subscription_name     = lower(var.subscription_name)
 
   // BigQuery success output
