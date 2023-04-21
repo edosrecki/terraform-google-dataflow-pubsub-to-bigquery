@@ -412,7 +412,7 @@ resource "google_dataflow_flex_template_job" "flex_jobs" {
 
   parameters = merge({
     workerMachineType = var.machine_type
-    maxNumWorker      = var.max_workers
+    maxNumWorkers     = var.max_workers
     serviceAccount    = local.service_account_email
     tempLocation      = local.temp_location
   }, each.value.parameters)
